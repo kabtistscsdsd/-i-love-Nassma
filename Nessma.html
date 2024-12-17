@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-container" class="container">
+        <h1> Welcome </h1>
+        <p>Enter the secret code to continue:</p>
+        <input type="text" id="code-input" placeholder="Enter code here..." />
+        <button id="submit-code">Submit</button>
+        <p id="error-message" class="hidden">❌ Incorrect Code. Try Again.</p>
+    </div>
+
+    <!-- Message Screen (hidden initially) -->
+    <div id="final-message" class="container hidden">
+        <h1>🎉 Happy Birthday 🎉</h1>
+        <p>ttttttttt</p>
+    </div>
+
+    <!-- Background Word Display -->
+    <div id="background-word"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

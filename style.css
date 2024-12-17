@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f9f3f3;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Word Styling */
+#background-word {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem; /* Smaller font for mobile */
+    font-weight: bold;
+    color: rgba(200, 100, 100, 0.2);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+    text-align: center;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Makes it fit smaller screens */
+    max-width: 500px;
+    z-index: 2;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+    margin-bottom: 10px;
+    color: #e63946;
+}
+
+p {
+    font-size: 1rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+input {
+    padding: 10px;
+    width: 100%; /* Full width on small screens */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #d62839;
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: red;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #background-word {
+        font-size: 2.5rem; /* Adjust size for mobile screens */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    input, button {
+        font-size: 0.9rem; /* Slightly smaller input and button text */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    #background-word {
+        font-size: 2rem; /* Smaller size for very small screens */
+    }
+
+    button {
+        padding: 8px 15px; /* Smaller button padding */
+    }
+}
